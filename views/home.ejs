@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>TODO App</h1>
+        </div>
+        <form action="">
+            <div class="inputs">
+                <div class="description">
+                    <label for="description">DESCRIPTION</label>
+                    <input type="text" name="description" id="description" placeholder="what do you want to do">
+                </div>
+                <div class="category">
+                    <label for="category">CATEGORY</label>
+                    <select name="category" id="category">
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Business">Business</option>
+                        <option value="Expense">Expense</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="due-date">
+                    <label for="due-date">DUE-DATE</label>
+                    <input type="date" name="dueDate" id="due-date">
+                </div>
+            </div>
+            <div class="btns">
+                <button type="submit" class="add-btn">
+                    <span>ADD TASK</span>
+                </button>
+                <button type="submit">
+                    <span>DELETE TASK</span>
+                </button>
+            </div>
+        </form>
+
+        <div class="show-tasks">
+            <ul>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <p>Task 1</p>
+                    <p>Aug 10, 2023</p>
+                    <div class="tag">
+                        School
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
