@@ -1,0 +1,164 @@
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #C5DFF8;
+}
+
+.container{
+    width: 60%;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 12px 5px maroon;
+
+}
+
+.form1{
+    width:80%;
+    height: 30%;
+}
+
+.heading{
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+}
+
+form{
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.inputs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 3px 10px;
+    justify-content: center;
+}
+
+.inputs>*{
+    flex-basis: 47.5%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.description{
+    flex-basis: 97%;
+    border-bottom: 1px solid lightgray;
+    padding: 0px 0px 12px;
+}
+
+.category{
+    border-right: 1px solid lightgray;
+}
+
+.inputs input, .inputs select{
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    border-top: 1px solid lightgray;
+    padding: 15px 20px;
+}
+
+.btns button{
+    margin: 5px;
+    margin-left: -120px;
+    padding: 5px 10px;
+    /* font-size: 10px; */
+    color: white;
+    background-color: gray;
+}
+
+.btns button>*{
+    margin: 3px;
+}
+
+.Delete-btn{
+    background-color: red;
+    color: white;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -58px;
+    margin-left: 150px;
+}
+
+.Delete-btn>*{
+    margin:3px;
+    color:white
+}
+
+.form-2{
+    width: 80%;
+}
+
+.show-tasks{
+    width: 95%;
+}
+
+.show-tasks ul{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-items: center;
+    padding: 4px;
+}
+
+.show-tasks li{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    margin-top: 10px;
+}
+
+.task-detail{
+    /* width: 300px; */
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.tasks{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+    justify-content: center;
+    /* justify-content: space-around; */
+}
+
+.tasks span{
+    margin: 5px 0;
+}
+
+.tag{
+    flex-basis: 10%;
+}
+

@@ -4,57 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://kit.fontawesome.com/c963f2acbc.js" crossorigin="anonymous"></script>
+    <title><%= title%></title>
 </head>
 <body>
     <div class="container">
         <div class="heading">
             <h1>TODO App</h1>
         </div>
-        <form action="">
-            <div class="inputs">
-                <div class="description">
-                    <label for="description">DESCRIPTION</label>
-                    <input type="text" name="description" id="description" placeholder="what do you want to do">
-                </div>
-                <div class="category">
-                    <label for="category">CATEGORY</label>
-                    <select name="category" id="category">
-                        <option value="Work">Work</option>
-                        <option value="Personal">Personal</option>
-                        <option value="Business">Business</option>
-                        <option value="Expense">Expense</option>
-                        <option value="Others">Others</option>
-                    </select>
-                </div>
-                <div class="due-date">
-                    <label for="due-date">DUE-DATE</label>
-                    <input type="date" name="dueDate" id="due-date">
-                </div>
-            </div>
-            <div class="btns">
-                <button type="submit" class="add-btn">
-                    <span>ADD TASK</span>
-                </button>
-                <button type="submit">
-                    <span>DELETE TASK</span>
-                </button>
-            </div>
-        </form>
-
-        <div class="show-tasks">
-            <ul>
-                <li>
-                    <input type="checkbox" name="" id="">
-                    <p>Task 1</p>
-                    <p>Aug 10, 2023</p>
-                    <div class="tag">
-                        School
+        <div class="form1">
+            <form action="/create-task" method="post" >
+                <div class="inputs">
+                    <div class="description">
+                        <label for="description">DESCRIPTION</label>
+                        <input type="text" name="description" id="description" placeholder="what do you want to do">
                     </div>
-                </li>
-            </ul>
+                    <div class="category">
+                        <label for="category">CATEGORY</label>
+                        <select name="category" id="category">
+                            <option value="NA">Choose a Category</option>
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Business">Business</option>
+                            <option value="Expense">Expense</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="due-date">
+                        <label for="due-date">DUE-DATE</label>
+                        <input type="date" name="dueDate" id="due-date">
+                    </div>
+                </div>
+                <div class="btns">
+                    <button><i class="fa-solid fa-plus"></i><span>ADD TASK</span></button>
+                </div>
+            </form>
+        </div>
+        <div class="form-2">
+            <form  action="/delete-task" method="get">           
+                    <button class="Delete-btn" type="submit"> <i class="fa-solid fa-trash-can"></i><span>DELETE TASK</span></button>
+                    
+    
+                <div class="show-tasks">
+                    <ul>
+                        <% for(let i of todo_list){%>
+                        <li>
+                            <div class="task-detail">
+                                    <input type="checkbox" name="<%=i._id%>" id="<%=i._id%>">
+                                <div class="tasks">
+                                    <span class="task-name"> <%= i.description%></span>
+                                    <span class="task-time"><%= i.dueDate%></span>
+                                </div>
+                            </div>
+                            <div class="tag">
+                                <%= i.category%>
+                            </div>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+             </form>
         </div>
     </div>
-    
+    <!-- <script src="JS/homeScript.js"></script> -->
 </body>
 </html>
