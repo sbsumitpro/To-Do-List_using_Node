@@ -1,7 +1,6 @@
 Todo = require("../model/todo")
-// const storage = require('node-sessionstorage')
-const sessionStorage = require('sessionstorage-for-nodejs');
 
+// This is to fetch all the existing task into the homepage
 module.exports.home = (req,res)=>{
     Todo.find({})
     .catch((err)=>
@@ -14,8 +13,8 @@ module.exports.home = (req,res)=>{
 })
 }
 
+// For creating new Tasks
 module.exports.createTask = (req,res)=>{
-    // console.log("req.body", req.body);
     Todo.create(req.body)
     .catch((err)=>{
         console.log("Some error in creating contact",err);
@@ -26,6 +25,7 @@ module.exports.createTask = (req,res)=>{
     })
 }
 
+// For deletion from Database
 module.exports.deleteTask = (req, res)=>{
     var id = req.query;
     var count = Object.keys(id).length

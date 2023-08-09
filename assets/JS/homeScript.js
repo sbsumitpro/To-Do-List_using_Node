@@ -1,4 +1,7 @@
-console.log("hello");
+// console.log("hello");
+
+// Not using this file now
+
 const checkBx = document.querySelector("input[checkbox]")
 const tasks = document.querySelectorAll(".tasks");
 

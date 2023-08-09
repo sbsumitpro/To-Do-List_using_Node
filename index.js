@@ -1,11 +1,16 @@
 const express = require("express")
 var bodyParser = require('body-parser')
 const port = 8000
+
+// Creating the momgodb connection
 const db = require("./config/mongoose")
+
+//calling the mongoDB Schema
 const todo =require("./model/todo")
 
 const app = express()
 
+// This is require to parse the form data into server
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json()); 
 
@@ -15,7 +20,7 @@ app.use("/", require("./routes"))
 app.use(express.static("assets"))
 
 
-//usning view engine
+//setting up the view engine
 app.set("view engine","ejs");
 app.set("views","./views")
 
